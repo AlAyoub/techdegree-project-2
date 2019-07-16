@@ -1,40 +1,60 @@
-/******************************************
-Treehouse Techdegree:
-FSJS project 2 - List Filter and Pagination
-******************************************/
-
-// Add variables that store DOM elements you will need to reference and/or manipulate
+// Alan Ayoub
+// Treehouse Techdegree
+// FSJS project 2 - List Filter and Pagination
 
 
-
-// Create a function to hide all of the items in the list excpet for the ten you want to show
-// Tip: Keep in mind that with a list of 54 studetns, the last page will only display four
-
-function showPage(/* arguments here for page number and student list */) {
-    // first hide all students on the page
-    // Then loop through all students in our student list argument
-       // if student should be on this page number
-       	// show the student
- }
+// global variables
+const studentListItems = document.querySelectorAll('.student-item');
+const maxPerPage = 10;
 
 
+/*** 
+   Create the `showPage` function to hide all of the items in the 
+   list except for the ten you want to show.
 
+   Pro Tips: 
+     - Keep in mind that with a list of 54 students, the last page 
+       will only display four.
+     - Remember that the first student has an index of 0.
+     - Remember that a function `parameter` goes in the parens when 
+       you initially define the function, and it acts as a variable 
+       or a placeholder to represent the actual function `argument` 
+       that will be passed into the parens later when you call or 
+       "invoke" the function 
+***/
 
-// Create and append the pagination links - Creating a function that can do this is a good approach
-
-function appendPageLinks(/* take a student list as an argument */) {
-    // determine how many pages for this student list
-    // create a page link section
-    // “for” every page
-        // add a page link to the page link section
-    // remove the old page link section from the site
-    // append our new page link section to the site
-    // define what happens when you click a link
-        // Use the showPage function to display the page for the link clicked
-        // mark that link as “active”
-}
+const  showPage =  ( studentListItems, page ) =>  { /*
+   Loop over items in the list parameter
+   -- If the index of a list item is  >=  the index of the first item that should be shown on the page
+   --  &&  the list item index is  <=  the index of the last item that should be shown on the page, show it
+   */
+   }
 
 
 
-// Add functionality to the pagination buttons so that they show and hide the correct items
-// Tip: If you created a function above to show/hide list items, it could be helpful here
+
+/*** 
+   Create the `appendPageLinks function` to generate, append, and add 
+   functionality to the pagination buttons.
+***/
+
+const  appendPageLinks =  (studentListItems)    =>  {  
+   let numberOfStudents = studentListItems.length;
+   let numberOfPages = Math.ceil(numberOfStudents/maxPerPage);
+   let activePage = 1;
+   return console.log(numberOfPages);
+    
+
+    /*
+   2.  Create a div,  give it the “pagination” class, and append it to the .page div 
+   3.  Add a ul  to the “pagination” div to store the pagination links
+   4.  for  every page, add li and a tags with the page number text */
+   showPage(studentListItems, activePage)
+   /*
+   6. Loop over pagination links to remove active class from all links
+   7. Add the active class to the link that was just clicked. You can identify that
+   clicked link using  event.target  */
+   }
+
+
+appendPageLinks(studentListItems);
