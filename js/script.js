@@ -61,7 +61,7 @@ const appendPageLinks = (studentList) => {
       liButton.appendChild(anchorButton);
       ulForButtons.appendChild(liButton);
    }
-   // When a new button is clicked, we make it active
+   // When a new button is clicked, it becomes the active button
    ulForButtons.addEventListener('click', (e) => {
       let previousButton = document.querySelector('.active');
       previousButton.className = '';
