@@ -71,4 +71,5 @@ const appendPageLinks = (studentList) => {
    });
    showPage(studentList, activePageButton)
 };
+// call the appendPageLinks function 
 appendPageLinks(studentListItems);
